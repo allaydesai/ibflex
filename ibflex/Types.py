@@ -1059,7 +1059,7 @@ class Trade(FlexElement):
     origTransactionID: Optional[str] = None
     subCategory: Optional[str] = None
     figi: Optional[str] = None
-
+    issuerCountryCode: Optional[str] = None
 
 @dataclass(frozen=True)
 class Lot(FlexElement):
@@ -1607,6 +1607,13 @@ class OptionEAE(FlexElement):
     model: Optional[str] = None
     relatedTradeID: Optional[str] = None
     subCategory: Optional[str] = None
+    figi: Optional[str] = None
+    issuerCountryCode: Optional[str] = None
+    serialNumber: Optional[str] = None
+    deliveryType: Optional[str] = None
+    commodityType: Optional[str] = None
+    fineness: Optional[decimal.Decimal] = None
+    weight: Optional[str] = None
 
 
 #  Type alias to work around https://github.com/python/mypy/issues/1775
